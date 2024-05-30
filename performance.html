@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Registration</title>
+    <link rel="stylesheet" href="performance.css">
+    <link rel="icon" href="images/logo2.jpg">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#performanceRegistrationForm').submit(function(e) {
+                e.preventDefault(); // Prevent default form submission
+                
+                // Serialize form data
+                var formData = $(this).serialize();
+                
+                // Submit form data via AJAX
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost:3000/registerPerformance',
+                    data: formData,
+                    success: function(response) {
+                        console.log('Success:', response);
+                        // Redirect to pop-up page
+                        window.location.href = '/PopUp.html';
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body class="background-image">
+    <header>
+        <div class="logo">
+            <img src="images/logo2.jpg" alt="">
+            <p>GatherWise</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About/Contact</a></li> 
+                <li><a href="performance.html">Performances</a></li> 
+                <li><a href="menu.html">menu</a></li> 
+                <li><a href="tasks.html">Tasks</a></li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Events</a>
+                    <ul class="dropdown">
+                        <li><a href="farewell_registration.html">Farewell</a></li>
+                        <li><a href="#">Welcome</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Performance Registration</h2>
+        <form id="performanceRegistrationForm" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="roll">Roll Number:</label>
+            <input type="text" id="roll" name="roll" required>
+
+            <label for="batch">Batch:</label>
+            <input type="text" id="batch" name="batch" required>
+
+            <label for="performance">Performance Preference:</label>
+            <select id="performance" name="performance">
+                <option value="dance">Dance</option>
+                <option value="stage_drama">Stage Drama</option>
+                <option value="singing">Singing</option>
+                <option value="skit">Skit</option>
+                <option value="stand_up">Stand-up</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Other content of the performance registration page goes here -->
+
+</body>
+</html>

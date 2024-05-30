@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(21, 40, 40);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.logo p {
+    color: rgb(5, 62, 85);
+    font-size: 20px;
+    font-weight: bold; /* Bold font weight */
+    font-style: italic; /* Italic font style */
+    font-family: 'Algerian', serif; /* Algerian font family */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    font-weight: bold; /* Bold font weight */
+    font-style: italic; /* Italic font style */
+    font-family: 'Algerian', serif; /* Algerian font family */
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgb(21, 40, 40);
+    padding: 10px;
+}
+
+.dropdown li {
+    margin: 5px 0;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 5px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.background-image {
+    background-image: url(images/image4.jpg);
+    height: 100vh;
+    padding: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.form-container {
+    background-color: rgba(97, 97, 97, 0.7);
+    color: white;
+    padding: 50px;
+    padding-bottom: 1px;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap to new line */
+    justify-content: space-between;
+}
+
+.column {
+    width: 48%; /* Adjusted width for two columns */
+}
+
+.column label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.button-link {
+    display: inline-block;
+    background-color: rgb(0, 84, 29);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-link:hover {
+    background-color: rgb(65, 157, 81);
+}
+
+
+/* CSS for form elements */
+input[type="text"],
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .column {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="tasks.css">
+    <title>Task Application</title>
+    <link rel="icon" href="images/logo2.jpg">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#registerTaskForm').submit(function(e) {
+                e.preventDefault(); // Prevent default form submission
+                
+                // Serialize form data
+                var formData = $(this).serialize();
+                
+                // Submit form data via AJAX
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost:3000/registerTask',
+                    data: formData,
+                    success: function(response) {
+                        console.log('Success:', response);
+                        // Redirect to pop-up page
+                        window.location.href = '/PopUp.html';
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo2.jpg" alt="">
+            <p>GatherWise</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About/Contact</a></li> 
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="performance.html">Performances</a></li> 
+                <li><a href="menu.html">menu</a></li> 
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Events</a>
+                    <ul class="dropdown">
+                        <li><a href="farewell_registration.html">Farewell</a></li>
+                        <li><a href="#">Welcome</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="background-image">
+        <div class="form-container">
+            <h2>Task Application</h2>
+            <form id="registerTaskForm" method="POST">
+                <label for="team">Select Team:</label>
+                <select id="team" name="team">
+                    <option value="decorations">Decorations</option>
+                    <option value="operations">Operations</option>
+                    <option value="setup">Setup</option>
+                    <option value="venue">Venue</option>
+                    <option value="hosting">Hosting</option>
+                    <option value="logistics">Logistics</option>
+                </select>
+
+                <label for="message">Additional Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Enter any additional message here..."></textarea>
+
+                <button type="submit">Apply</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Other content of the task application page goes here -->
+
+</body>
+</html>

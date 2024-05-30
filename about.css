@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(21, 40, 40);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.logo p {
+    color: rgb(5, 62, 85);
+    font-size: 20px;
+    font-weight: bold; /* Bold font weight */
+    font-style: italic; /* Italic font style */
+    font-family: 'Algerian', serif; /* Algerian font family */
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    font-weight: bold; /* Bold font weight */
+    font-style: italic; /* Italic font style */
+    font-family: 'Algerian', serif; /* Algerian font family */
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgb(21, 40, 40);
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    width: max-content; /* Adjust width to fit content */
+    z-index: 1; /* Ensure dropdown appears above other elements */
+}
+
+.dropdown li {
+    margin: 5px 0;
+}
+
+.dropdown li a {
+    display: block; /* Ensure each link takes up the full width */
+    padding: 5px 15px; /* Add padding for better styling */
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Add hover effect */
+}
+
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+.about-section {
+    background-image: linear-gradient(to bottom right, rgb(0, 102, 204), rgb(0, 204, 102)); /* Darker blue to brighter green gradient */
+    color: white;
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 5000px;
+    margin: 50px auto; /* Center the section horizontally */
+}
+
+
+
+.about-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-section p:last-child {
+    margin-bottom: 0;
+}

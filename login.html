@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+    <link rel="icon" href="images/logo2.jpg">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#registrationForm').submit(function(e) {
+                e.preventDefault(); // Prevent default form submission
+                
+                // Serialize form data
+                var formData = $(this).serialize();
+                
+                // Submit form data via AJAX
+                $.ajax({
+                    type: 'POST',
+                    url: '/registerFarewell',
+                    data: formData,
+                    success: function(response) {
+                        // Redirect to pop-up page
+                        window.location.href = '/PopUp.html';
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle errors if needed
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo2.jpg" alt="">
+            <p>GatherWise</p>
+        </div>
+    </header>
+
+    <div class="body">
+        <div class="main">
+            <h2>Login to GatherWise</h2>
+            <form action="http://localhost:3000/login" method="POST">
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" required placeholder="Enter your username"><br>
+                
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" required placeholder="Enter your password"><br>
+                
+                <a href="signup.html" class="signup-link">Create a new account</a><br>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

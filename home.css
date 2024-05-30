@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(21, 40, 40);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.logo p {
+    color: rgb(5, 62, 85);
+    font-size: 20px;
+    font-weight: bold; /* Bold font weight */
+    font-style: italic; /* Italic font style */
+    font-family: 'Algerian', serif; /* Algerian font family */
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    font-weight: bold; /* Bold font weight */
+    font-style: italic; /* Italic font style */
+    font-family: 'Algerian', serif; /* Algerian font family */
+}
+
+/* Other CSS remains unchanged */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgb(21, 40, 40);
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    width: max-content; /* Adjust width to fit content */
+    z-index: 1; /* Ensure dropdown appears above other elements */
+}
+
+.dropdown li {
+    margin: 5px 0;
+}
+
+.dropdown li a {
+    display: block; /* Ensure each link takes up the full width */
+    padding: 5px 15px; /* Add padding for better styling */
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Add hover effect */
+}
+
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+.background-image {
+    background-image: url(images/image4.jpg);
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 50px;
+    padding-top: 100px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    box-sizing: border-box; /* Add this line */
+}
+
+.overlay h1 {
+    font-size: 36px;
+}
+
+.overlay p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto; /* Center the paragraph horizontally */
+    max-width: 80%; /* Limit the width of the paragraph */
+}
+/* Other CSS remains unchanged */
+.upcoming-events {
+    background-color: rgba(225, 225, 225, 0.7);
+    padding: 50px;
+    text-align: center;
+    overflow: hidden; /* Add this line to clear floats */
+}
+
+.upcoming-events h2 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px; /* Adjust margin to provide space below the heading */
+}
+
+.event {
+    display: inline-block;
+    width: 45%;
+    margin: 20px;
+    position: relative;
+    vertical-align: top; /* Add this line to align sub-divs properly */
+}
+
+.event-overlay {
+    position: relative; /* Change position to relative */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    background-size: cover; /* Add background size to cover entire div */
+    background-position: center; /* Center the background image */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event-overlay h3 {
+    color: white;
+}
+
+.event button {
+    background-color: rgb(0, 84, 29);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Adjust width to 100% */
+}
+
+.event button:hover {
+    background-color: rgb(65, 157, 81);
+}

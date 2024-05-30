@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up</title>
+    <link rel="icon" href="images/logo2.jpg">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo2.jpg" alt="">
+            <p>GatherWise</p>
+        </div>
+    </header>
+
+    <div class="body">
+        <div class="main">
+            <h2>Sign Up for GatherWise</h2>
+            <form action="http://localhost:3000/register" method="POST">
+                <div class="column">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name"><br>
+                
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email"><br>
+                    
+                    <label for="role">Role</label><br>
+                    <select id="role" name="role" required>
+                        <option value="">Select Role</option>
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                    </select><br>
+                </div>
+                
+                <div class="column">
+                    <label for="username">Username</label><br>
+                    <input type="text" id="username" name="username" required placeholder="Choose a username"><br>
+                    
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" name="password" required placeholder="Choose a password"><br>
+                    
+                    
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
